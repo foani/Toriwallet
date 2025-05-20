@@ -1,0 +1,122 @@
+{
+  "appName": {
+    "message": "TORI Wallet",
+    "description": "The name of the wallet extension"
+  },
+  "appDescription": {
+    "message": "A multi-chain cryptocurrency wallet for CreataChain ecosystem",
+    "description": "The description of the wallet extension"
+  },
+  "welcome": {
+    "message": "Welcome to TORI Wallet",
+    "description": "Welcome message"
+  },
+  "createWallet": {
+    "message": "Create New Wallet",
+    "description": "Create a new wallet"
+  },
+  "importWallet": {
+    "message": "Import Existing Wallet",
+    "description": "Import an existing wallet"
+  },
+  "send": {
+    "message": "Send",
+    "description": "Send crypto"
+  },
+  "receive": {
+    "message": "Receive",
+    "description": "Receive crypto"
+  },
+  "transactions": {
+    "message": "Transactions",
+    "description": "Transaction history"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings"
+  },
+  "stake": {
+    "message": "Stake",
+    "description": "Stake tokens"
+  },
+  "unstake": {
+    "message": "Unstake",
+    "description": "Unstake tokens"
+  },
+  "rewards": {
+    "message": "Rewards",
+    "description": "Staking rewards"
+  },
+  "dApps": {
+    "message": "dApps",
+    "description": "Decentralized applications"
+  },
+  "connectRequest": {
+    "message": "Connection Request",
+    "description": "dApp connection request"
+  },
+  "signRequest": {
+    "message": "Signature Request",
+    "description": "Transaction signature request"
+  },
+  "security": {
+    "message": "Security",
+    "description": "Security settings"
+  },
+  "networks": {
+    "message": "Networks",
+    "description": "Network settings"
+  },
+  "backupWallet": {
+    "message": "Backup Wallet",
+    "description": "Backup wallet"
+  },
+  "copyAddress": {
+    "message": "Copy Address",
+    "description": "Copy wallet address"
+  },
+  "addressCopied": {
+    "message": "Address copied to clipboard",
+    "description": "Address copied notification"
+  },
+  "password": {
+    "message": "Password",
+    "description": "Password"
+  },
+  "confirmPassword": {
+    "message": "Confirm Password",
+    "description": "Confirm password"
+  },
+  "enterPassword": {
+    "message": "Enter Password",
+    "description": "Enter password"
+  },
+  "logout": {
+    "message": "Logout",
+    "description": "Logout"
+  },
+  "approve": {
+    "message": "Approve",
+    "description": "Approve transaction"
+  },
+  "reject": {
+    "message": "Reject",
+    "description": "Reject transaction"
+  },
+  "next": {
+    "message": "Next",
+    "description": "Next button"
+  },
+  "back": {
+    "message": "Back",
+    "description": "Back button"
+  },
+  "confirm": {
+    "message": "Confirm",
+    "description": "Confirm button"
+  },
+  "cancel": {
+    "message": "Cancel",
+    "description": "Cancel button"
+  }
+}

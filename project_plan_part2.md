@@ -1,0 +1,89 @@
+# TORI 지갑 프로젝트 계획 (Part 2)
+
+## 4. 개발 단계 Part 2
+
+### 2단계: 브라우저 확장 프로그램 개발 (Part 2) (100% 완료)
+- [x] UI 컴포넌트 개발
+  - [x] components/common/Button.tsx: 버튼 컴포넌트
+  - [x] components/common/Input.tsx: 입력 필드 컴포넌트
+  - [x] components/common/Modal.tsx: 모달 컴포넌트
+  - [x] components/common/Card.tsx: 카드 컴포넌트
+  - [x] components/common/Loading.tsx: 로딩 컴포넌트
+  - [x] components/common/Tabs.tsx: 탭 컴포넌트
+  - [x] components/wallet/AccountSelector.tsx: 계정 선택기
+  - [x] components/wallet/AssetsList.tsx: 자산 목록
+  - [x] components/wallet/TransactionItem.tsx: 트랜잭션 항목
+  - [x] components/wallet/NetworkSelector.tsx: 네트워크 선택기
+  - [x] components/wallet/ReceiveModal.tsx: 수신 모달
+  - [x] components/wallet/SendForm.tsx: 전송 양식
+- [x] 지갑 생성/복구 화면 개발
+  - [x] pages/WelcomePage.tsx: 환영 페이지
+  - [x] pages/CreateWallet.tsx: 지갑 생성 페이지
+  - [x] pages/ImportWallet.tsx: 지갑 가져오기 페이지
+  - [x] popup/App.tsx: 앱 진입점 및 라우팅
+  - [x] popup/index.tsx: 팝업 진입점
+- [x] 자산 관리 화면 개발
+  - [x] pages/Dashboard.tsx: 대시보드 페이지
+  - [x] pages/Send.tsx: 전송 페이지
+  - [x] pages/Receive.tsx: 수신 페이지
+- [x] 트랜잭션 기능 구현
+  - [x] pages/TransactionHistory.tsx: 트랜잭션 히스토리 페이지
+  - [x] pages/TransactionDetails.tsx: 트랜잭션 상세 정보 페이지
+  - [x] components/transaction/TransactionConfirmation.tsx: 트랜잭션 확인 컴포넌트
+  - [x] components/transaction/TransactionStatus.tsx: 트랜잭션 상태 모니터링 컴포넌트
+- [x] 설정 및 보안 기능 구현
+  - [x] pages/Settings.tsx: 설정 페이지
+  - [x] pages/BackupPage.tsx: 시드 구문 백업 페이지
+  - [x] pages/UnlockPage.tsx: 잠금 해제 페이지
+- [x] dApp 브라우저 및 연결 기능 구현
+  - [x] pages/DAppsList.tsx: dApp 목록 페이지
+  - [x] pages/DAppBrowserPage.tsx: dApp 브라우저 페이지
+  - [x] components/dapp/DAppCard.tsx: dApp 카드 컴포넌트
+  - [x] components/dapp/DAppBrowser.tsx: dApp 브라우저 컴포넌트
+  - [x] components/dapp/ConnectRequest.tsx: 연결 요청 컴포넌트
+  - [x] components/dapp/SignRequest.tsx: 서명 요청 컴포넌트
+- [x] 멀티체인 및 크로스체인 기능 구현
+  - [x] 크로스체인 서비스 구현:
+    - [x] services/crosschain/index.ts: 크로스체인 서비스 진입점
+    - [x] services/crosschain/relayer.ts: ICP 릴레이어 서비스
+    - [x] services/crosschain/bridge.ts: 크로스체인 브릿지 서비스
+    - [x] services/crosschain/swap.ts: 크로스체인 스왑 서비스
+    - [x] services/crosschain/routing.ts: 경로 최적화 서비스
+  - [x] 크로스체인 UI 컴포넌트:
+    - [x] components/crosschain/ICPTransfer.tsx: ICP 전송 컴포넌트
+    - [x] components/crosschain/BridgeForm.tsx: 브릿지 양식 컴포넌트
+    - [x] components/crosschain/CrosschainHistory.tsx: 크로스체인 트랜잭션 히스토리 컴포넌트
+  - [x] 크로스체인 페이지:
+    - [x] pages/CrosschainPage.tsx: 크로스체인 기능 페이지
+    - [x] pages/CrosschainDetailsPage.tsx: 크로스체인 트랜잭션 상세 정보 페이지
+  - [x] 크로스체인 후크:
+    - [x] hooks/useCrosschain.ts: 크로스체인 기능 사용 후크
+    - [x] hooks/useNetwork.ts: 네트워크 관리 후크
+    - [x] hooks/useWallet.ts: 지갑 관리 후크
+    - [x] hooks/useAssets.ts: 자산 관리 후크
+- [x] 스테이킹 및 DeFi 기능 구현 (100% 완료)
+  - [x] 스테이킹 서비스 구현:
+    - [x] services/staking/validators.ts: 검증인 정보 서비스
+    - [x] services/staking/delegation.ts: 위임 관리 서비스
+    - [x] services/staking/rewards.ts: 보상 관리 서비스
+    - [x] services/staking/autocompound.ts: 자동 복리 서비스
+  - [x] 스테이킹 UI 컴포넌트:
+    - [x] components/staking/ValidatorCard.tsx: 검증인 카드 컴포넌트
+    - [x] components/staking/StakingForm.tsx: 스테이킹 양식 컴포넌트
+    - [x] components/staking/RewardsCard.tsx: 보상 카드 컴포넌트
+    - [x] components/staking/UnstakeForm.tsx: 언스테이킹 양식 컴포넌트
+  - [x] 스테이킹 페이지:
+    - [x] pages/StakingPage.tsx: 스테이킹 페이지
+    - [x] pages/ValidatorDetailsPage.tsx: 검증인 상세 정보 페이지
+  - [x] DeFi 관련 타입 및 서비스 구현:
+    - [x] types/defi.ts: DeFi 관련 타입 정의
+    - [x] services/defi/index.ts: DeFi 서비스 진입점
+    - [x] services/defi/defi-service.ts: DeFi 서비스 클래스
+    - [x] services/defi/liquidity-service.ts: 유동성 풀 관련 서비스
+    - [x] services/defi/farming-service.ts: 농사(파밍) 관련 서비스
+    - [x] services/defi/lending-service.ts: 대출 관련 서비스
+    - [x] services/defi/price-service.ts: 가격 정보 관련 서비스
+    - [x] services/defi/swap-service.ts: 스왑 관련 서비스
+  - [x] DeFi UI 후크 및 컴포넌트 구현:
+    - [x] hooks/useDefi.ts: DeFi 기능 사용 후크
+    - [x] pages/DefiPage.tsx: DeFi 메인 페이지

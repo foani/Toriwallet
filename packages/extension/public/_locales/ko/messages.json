@@ -1,0 +1,122 @@
+{
+  "appName": {
+    "message": "TORI 지갑",
+    "description": "지갑 확장 프로그램의 이름"
+  },
+  "appDescription": {
+    "message": "CreataChain 생태계를 위한 멀티체인 암호화폐 지갑",
+    "description": "지갑 확장 프로그램 설명"
+  },
+  "welcome": {
+    "message": "TORI 지갑에 오신 것을 환영합니다",
+    "description": "환영 메시지"
+  },
+  "createWallet": {
+    "message": "새 지갑 생성",
+    "description": "새 지갑 생성"
+  },
+  "importWallet": {
+    "message": "기존 지갑 가져오기",
+    "description": "기존 지갑 가져오기"
+  },
+  "send": {
+    "message": "전송",
+    "description": "암호화폐 전송"
+  },
+  "receive": {
+    "message": "수신",
+    "description": "암호화폐 수신"
+  },
+  "transactions": {
+    "message": "거래 내역",
+    "description": "거래 내역"
+  },
+  "settings": {
+    "message": "설정",
+    "description": "설정"
+  },
+  "stake": {
+    "message": "스테이킹",
+    "description": "토큰 스테이킹"
+  },
+  "unstake": {
+    "message": "언스테이킹",
+    "description": "토큰 언스테이킹"
+  },
+  "rewards": {
+    "message": "보상",
+    "description": "스테이킹 보상"
+  },
+  "dApps": {
+    "message": "dApps",
+    "description": "탈중앙화 애플리케이션"
+  },
+  "connectRequest": {
+    "message": "연결 요청",
+    "description": "dApp 연결 요청"
+  },
+  "signRequest": {
+    "message": "서명 요청",
+    "description": "트랜잭션 서명 요청"
+  },
+  "security": {
+    "message": "보안",
+    "description": "보안 설정"
+  },
+  "networks": {
+    "message": "네트워크",
+    "description": "네트워크 설정"
+  },
+  "backupWallet": {
+    "message": "지갑 백업",
+    "description": "지갑 백업"
+  },
+  "copyAddress": {
+    "message": "주소 복사",
+    "description": "지갑 주소 복사"
+  },
+  "addressCopied": {
+    "message": "주소가 클립보드에 복사되었습니다",
+    "description": "주소 복사 알림"
+  },
+  "password": {
+    "message": "비밀번호",
+    "description": "비밀번호"
+  },
+  "confirmPassword": {
+    "message": "비밀번호 확인",
+    "description": "비밀번호 확인"
+  },
+  "enterPassword": {
+    "message": "비밀번호 입력",
+    "description": "비밀번호 입력"
+  },
+  "logout": {
+    "message": "로그아웃",
+    "description": "로그아웃"
+  },
+  "approve": {
+    "message": "승인",
+    "description": "트랜잭션 승인"
+  },
+  "reject": {
+    "message": "거부",
+    "description": "트랜잭션 거부"
+  },
+  "next": {
+    "message": "다음",
+    "description": "다음 버튼"
+  },
+  "back": {
+    "message": "이전",
+    "description": "이전 버튼"
+  },
+  "confirm": {
+    "message": "확인",
+    "description": "확인 버튼"
+  },
+  "cancel": {
+    "message": "취소",
+    "description": "취소 버튼"
+  }
+}

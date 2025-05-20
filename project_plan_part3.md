@@ -1,0 +1,119 @@
+# TORI 지갑 프로젝트 계획 (Part 3)
+
+## 4. 개발 단계 Part 3
+
+### 3단계: 모바일 앱 개발 (100% 완료)
+- [x] React Native 프로젝트 설정
+  - [x] package.json 설정
+  - [x] 프로젝트 디렉토리 구조 구성
+  - [x] 네이티브 모듈 설정 (iOS, Android)
+- [x] 훅(Hooks) 구현
+  - [x] useTheme.ts: 테마 관리 훅
+  - [x] useLanguage.ts: 다국어 지원 훅
+  - [x] useWallet.ts: 지갑 관리 훅
+  - [x] useNetwork.ts: 네트워크 관리 훅
+  - [x] useNotification.ts: 알림 관리 훅
+- [x] 테마 구현
+  - [x] light.ts: 라이트 테마 스타일
+  - [x] dark.ts: 다크 테마 스타일
+- [x] UI 컴포넌트 개발
+  - [x] 공통 컴포넌트 개발
+    - [x] Button.tsx: 버튼 컴포넌트
+    - [x] Input.tsx: 입력 필드 컴포넌트
+    - [x] Card.tsx: 카드 컴포넌트
+    - [x] Header.tsx: 헤더 컴포넌트
+    - [x] Loading.tsx: 로딩 인디케이터 컴포넌트
+    - [x] TabView.tsx: 탭 뷰 컴포넌트
+  - [x] 지갑 관련 컴포넌트 개발
+    - [x] AccountCard.tsx: 계정 카드 컴포넌트
+    - [x] AssetItem.tsx: 자산 항목 컴포넌트
+    - [x] AssetsList.tsx: 자산 목록 컴포넌트
+    - [x] TransactionItem.tsx: 트랜잭션 항목 컴포넌트
+    - [x] TransactionsList.tsx: 트랜잭션 목록 컴포넌트
+- [x] 생체 인증 통합
+  - [x] BiometricService.ts: 생체 인증 서비스
+  - [x] useBiometrics.ts: 생체 인증 훅
+  - [x] BiometricPrompt.tsx: 생체 인증 프롬프트 컴포넌트
+  - [x] BiometricSetup.tsx: 생체 인증 설정 화면
+- [x] 푸시 알림 구현
+  - [x] NotificationService.ts: 알림 서비스
+  - [x] useNotifications.ts: 알림 훅
+  - [x] NotificationItem.tsx: 알림 항목 컴포넌트
+  - [x] NotificationSettings.tsx: 알림 설정 화면
+- [x] QR 코드 스캔 기능 구현
+  - [x] QRCodeScanner.tsx: QR 코드 스캐너 컴포넌트
+  - [x] QRCodeGenerator.tsx: QR 코드 생성 컴포넌트
+  - [x] QRCodeScanScreen.tsx: QR 코드 스캔 화면
+  - [x] ReceiveScreen.tsx: 자산 수신 화면
+- [x] 지갑 및 자산 관리 화면 개발
+  - [x] Dashboard.tsx: 대시보드 화면
+  - [x] ReceiveScreen.tsx: 자산 수신 화면
+  - [x] QRCodeScanScreen.tsx: QR 코드 스캔 화면
+  - [x] Send.tsx: 자산 전송 화면
+  - [x] TransactionHistory.tsx: 트랜잭션 내역 화면
+  - [x] TransactionDetails.tsx: 트랜잭션 상세 화면
+  - [x] ManageAccounts.tsx: 계정 관리 화면
+- [x] 트랜잭션 기능 구현
+  - [x] 자산 전송 화면
+  - [x] 트랜잭션 내역 목록 화면
+  - [x] 트랜잭션 상세 화면
+  - [x] 트랜잭션 수수료 계산 및 가스 가격 설정
+  - [x] 트랜잭션 상태 모니터링
+- [x] 설정 및 보안 기능 구현
+  - [x] Settings.tsx: 설정 메인 화면
+  - [x] Security.tsx: 보안 설정 화면
+  - [x] BackupWallet.tsx: 지갑 백업 화면
+  - [x] Theme.tsx: 테마 설정 화면
+  - [x] Language.tsx: 언어 설정 화면
+  - [x] NotificationSettings.tsx: 알림 설정 화면
+- [x] dApp 브라우저 구현
+  - [x] DAppBrowser.tsx: dApp 브라우저 화면
+  - [x] DAppList.tsx: dApp 목록 화면
+  - [x] Bookmarks.tsx: 북마크 관리 화면
+  - [x] BrowserHistory.tsx: 방문 기록 화면
+  - [x] AddBookmark.tsx: 북마크 추가 화면
+- [x] 멀티체인 및 크로스체인 기능 구현
+  - [x] crosschain/ICPTransfer.tsx: ICP 전송 화면
+  - [x] crosschain/Bridge.tsx: 브릿지 화면
+  - [x] crosschain/History.tsx: 크로스체인 트랜잭션 내역 화면
+  - [x] crosschain/CrosschainDetails.tsx: 크로스체인 트랜잭션 상세 화면
+- [x] 스테이킹 및 DeFi 기능 구현
+  - [x] staking/Validators.tsx: 검증인 목록 화면
+  - [x] staking/Stake.tsx: 스테이킹 화면
+  - [x] staking/Unstake.tsx: 언스테이킹 화면
+  - [x] staking/Rewards.tsx: 보상 화면
+  - [x] staking/StakingScreen.tsx: 스테이킹 대시보드 화면
+  - [x] staking/index.ts: 모듈 내보내기
+  - [x] navigation/StakingNavigator.tsx: 스테이킹 네비게이터 설정
+  - [x] defi/DefiDashboard.tsx: DeFi 대시보드 화면
+  - [x] defi/Liquidity.tsx: 유동성 풀 화면
+  - [x] defi/Swap.tsx: 스왑 화면
+  - [x] defi/Lending.tsx: 대출 화면
+  - [x] defi/AllPositions.tsx: 모든 DeFi 포지션 화면
+  - [x] defi/index.ts: DeFi 모듈 내보내기
+  - [x] navigation/DefiNavigator.tsx: DeFi 네비게이터 설정
+
+### 4단계: 데스크톱 앱 개발 (100% 완료)
+- [x] Electron 프로젝트 설정
+  - [x] package.json 설정
+  - [x] 프로젝트 디렉토리 구조 구성
+  - [x] 빌드 설정 (webpack, electron-forge 등)
+  - [x] 테마 구성
+- [x] main process 구축
+  - [x] index.ts: 주요 엔트리 포인트
+  - [x] appWindow.ts: 앱 창 생성 및 관리
+  - [x] ipcHandlers.ts: IPC 통신 설정
+  - [x] menu.ts: 메뉴 구성
+  - [x] autoUpdater.ts: 자동 업데이트 관리
+- [x] preload 스크립트 구현
+  - [x] index.ts: 기본 설정
+  - [x] api.ts: 렌더러 프로세스에 노출할 API 정의
+- [x] UI 컴포넌트 개발
+  - [x] Sidebar.tsx: 사이드바 컴포넌트
+- [x] 지갑 및 자산 관리 화면 개발
+  - [x] App.tsx: 주요 업 컴포넌트
+  - [x] Home.tsx: 대시보드 화면
+  - [x] Wallet.tsx: 지갑 관리 화면
+  - [x] Staking.tsx: 스테이킹 화면
+  - [x] NFT.tsx: NFT 관리 화면
+  - [x] Settings.tsx: 설정 화면

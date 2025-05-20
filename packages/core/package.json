@@ -1,0 +1,36 @@
+{
+  "name": "@tori-wallet/core",
+  "version": "1.0.0",
+  "description": "Core functionality for TORI Wallet",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@ethersproject/providers": "^5.7.2",
+    "@types/node": "^20.8.6",
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "bitcoinjs-lib": "^6.1.5",
+    "crypto-js": "^4.1.1",
+    "ethers": "^6.8.0",
+    "eventemitter3": "^5.0.1",
+    "web3": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.2",
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "author": "CreataChain",
+  "license": "MIT"
+}

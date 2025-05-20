@@ -1,0 +1,446 @@
+/* 온보딩 페이지 스타일 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #1f67f2;
+  --secondary-color: #6dc8ff;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e6e6e6;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.onboarding-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.onboarding-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.onboarding-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.onboarding-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #666;
+}
+
+.onboarding-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.onboarding-steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.onboarding-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 180px;
+  position: relative;
+}
+
+.onboarding-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+  z-index: 0;
+}
+
+.onboarding-step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+  z-index: 1;
+}
+
+.onboarding-step.active .onboarding-step-number {
+  background-color: var(--primary-color);
+}
+
+.onboarding-step.completed .onboarding-step-number {
+  background-color: var(--success-color);
+}
+
+.onboarding-step-title {
+  font-size: 14px;
+  text-align: center;
+}
+
+.onboarding-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.onboarding-options {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.onboarding-option {
+  flex: 1;
+  padding: 24px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.onboarding-option:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(31, 103, 242, 0.05);
+}
+
+.onboarding-option.selected {
+  border-color: var(--primary-color);
+  background-color: rgba(31, 103, 242, 0.1);
+}
+
+.onboarding-option-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.onboarding-option-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.onboarding-option-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.mnemonic-container {
+  margin: 24px 0;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+.mnemonic-words {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.mnemonic-word {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.mnemonic-word-number {
+  background-color: var(--primary-color);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.mnemonic-verification {
+  margin-top: 24px;
+}
+
+.mnemonic-verification-title {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.verification-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.verification-slot {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.verification-slot.filled {
+  background-color: #f0f7ff;
+  border-color: var(--primary-color);
+}
+
+.verification-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.verification-option {
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.verification-option:hover {
+  background-color: #e0e0e0;
+}
+
+.verification-option.selected {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.password-requirements {
+  margin: 16px 0;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.password-requirement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.password-requirement-icon {
+  margin-right: 8px;
+  color: #ccc;
+}
+
+.password-requirement.satisfied .password-requirement-icon {
+  color: var(--success-color);
+}
+
+.onboarding-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1755cc;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(31, 103, 242, 0.1);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* 입력 필드 스타일 */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-helper {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* 알림 스타일 */
+.alert {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.alert-warning {
+  background-color: #fff8e6;
+  border: 1px solid #ffd88c;
+  color: #8a6d3b;
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #3c763d;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  color: #31708f;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1e1e2d;
+    --text-color: #e6e6e6;
+    --border-color: #333333;
+  }
+  
+  .onboarding-card {
+    background-color: #2a2a3c;
+  }
+  
+  .mnemonic-container {
+    background-color: #2a2a3c;
+    border-color: #444;
+  }
+  
+  .mnemonic-word {
+    background-color: #3a3a4c;
+  }
+  
+  .password-requirements {
+    background-color: #2a2a3c;
+  }
+  
+  .verification-option {
+    background-color: #3a3a4c;
+  }
+  
+  .verification-option:hover {
+    background-color: #444452;
+  }
+  
+  .alert-warning {
+    background-color: #45350f;
+    border-color: #75662a;
+    color: #ffd88c;
+  }
+  
+  .alert-success {
+    background-color: #0f3f1b;
+    border-color: #2a6e3c;
+    color: #a5d6a7;
+  }
+  
+  .alert-info {
+    background-color: #0d3a5c;
+    border-color: #1c5d8c;
+    color: #90caf9;
+  }
+}

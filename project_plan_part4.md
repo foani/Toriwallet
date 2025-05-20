@@ -1,0 +1,150 @@
+# TORI 지갑 프로젝트 계획 (Part 4)
+
+## 4. 개발 단계 Part 4
+
+### 5단계: 텔레그램 미니앱 개발 (100% 완료)
+- [x] 텔레그램 미니앱 프로젝트 설정
+  - [x] package.json 설정
+  - [x] 프로젝트 디렉토리 구조 구성
+  - [x] 빌드 설정 (vite 등)
+  - [x] 타입스크립트 설정
+- [x] UI 컴포넌트 개발
+  - [x] App.tsx: 주요 업 컴포넌트
+  - [x] 공통 컴포넌트 및 스타일 정의
+- [x] 텔레그램 API 통합
+  - [x] webApp.ts: 텔레그램 WebApp API 래퍼
+  - [x] client.ts: 텔레그램 봇 API 통신
+  - [x] payments.ts: 텔레그램 결제 API
+  - [x] notifications.ts: 텔레그램 알림 관리
+  - [x] tg-connection.ts: 텔레그램 연결 관리 서비스
+- [x] 지갑 및 자산 관리 화면 개발
+  - [x] Home.tsx: 메인 화면 및 자산 목록
+  - [x] Send.tsx: 자산 전송 화면
+  - [x] Receive.tsx: 자산 수신 화면
+  - [x] Settings.tsx: 설정 화면
+- [x] 트랜잭션 기능 구현
+  - [x] 텔레그램 사용자에게 송금 기능
+  - [x] 블록체인 주소로 송금 기능
+  - [x] QR 코드 생성 및 저장 기능
+- [x] P2P 송금 기능 구현
+  - [x] 텔레그램 사용자 이름으로 송금 기능
+  - [x] 결제 인보이스 생성 및 처리
+
+### 6단계: 관리자 패널 개발 (100% 완료)
+- [x] React 프로젝트 설정
+  - [x] package.json 설정
+  - [x] tsconfig.json 설정
+  - [x] 다국어 지원 설정
+  - [x] 테마 설정
+- [x] 상태 관리 및 API 연결 구현
+  - [x] 서비스 계층 구현
+    - [x] api.ts: API 클라이언트
+    - [x] auth.ts: 인증 서비스
+    - [x] users.ts: 사용자 관리 서비스
+    - [x] networks.ts: 네트워크 관리 서비스
+    - [x] analytics.ts: 분석 서비스
+    - [x] settings.ts: 설정 관리 서비스
+    - [x] logs.ts: 로그 관리 서비스
+  - [x] 커스텀 훅 구현
+    - [x] useUsers.ts: 사용자 관리 훅
+    - [x] useNetworks.ts: 네트워크 관리 훅
+    - [x] useAnalytics.ts: 분석 데이터 훅
+    - [x] useSettings.ts: 설정 관리 훅
+    - [x] useLogs.ts: 로그 관리 훅
+  - [x] 컨텍스트 구현
+    - [x] AuthContext.tsx: 인증 컨텍스트
+    - [x] ThemeContext.tsx: 테마 컨텍스트
+    - [x] LanguageContext.tsx: 언어 컨텍스트
+    - [x] NotificationContext.tsx: 알림 컨텍스트
+- [x] 공통 컴포넌트 개발
+  - [x] Button.tsx: 버튼 컴포넌트
+  - [x] Card.tsx: 카드 컴포넌트
+  - [x] Input.tsx: 입력 필드 컴포넌트
+  - [x] Modal.tsx: 모달 컴포넌트
+  - [x] Table.tsx: 테이블 컴포넌트
+  - [x] Tabs.tsx: 탭 컴포넌트
+  - [x] Loading.tsx: 로딩 컴포넌트
+  - [x] Header.tsx: 헤더 컴포넌트
+  - [x] Sidebar.tsx: 사이드바 컴포넌트
+- [x] 라우팅 설정
+  - [x] App.tsx: 앱 진입점 및 라우팅
+  - [x] ProtectedRoute.tsx: 보호된 라우트 컴포넌트
+- [x] 인증 관련 기능 구현
+  - [x] Login.tsx: 로그인 페이지
+  - [x] auth.ts: 인증 유틸리티
+- [x] 대시보드 화면 개발
+  - [x] Dashboard.tsx: 대시보드 페이지
+  - [x] StatCard.tsx: 통계 카드 컴포넌트
+  - [x] ActivityChart.tsx: 활동 차트 컴포넌트
+- [x] 네트워크 관리 기능 구현
+  - [x] NetworkManagement.tsx: 네트워크 관리 페이지
+  - [x] NetworkList.tsx: 네트워크 목록 컴포넌트
+  - [x] NetworkForm.tsx: 네트워크 생성/수정 양식 컴포넌트
+- [x] 사용자 관리 기능 구현
+  - [x] UserManagement.tsx: 사용자 관리 페이지
+  - [x] UserList.tsx: 사용자 목록 컴포넌트
+  - [x] UserDetails.tsx: 사용자 상세 정보 컴포넌트
+  - [x] UserForm.tsx: 사용자 생성/수정 양식 컴포넌트
+- [x] 분석 및 통계 기능 구현
+  - [x] Analytics.tsx: 분석 및 통계 페이지
+  - [x] AnalyticsChart.tsx: 통계 차트 컴포넌트
+  - [x] UserMetrics.tsx: 사용자 지표 컴포넌트
+  - [x] NetworkMetrics.tsx: 네트워크 지표 컴포넌트
+  - [x] AssetMetrics.tsx: 자산 지표 컴포넌트
+- [x] 로그 및 모니터링 기능 구현
+  - [x] LogViewer.tsx: 로그 뷰어 페이지
+  - [x] LogFilter.tsx: 로그 필터 컴포넌트
+  - [x] LogTable.tsx: 로그 테이블 컴포넌트
+  - [x] LogDetails.tsx: 로그 상세 정보 컴포넌트
+- [x] 시스템 설정 기능 구현
+  - [x] Settings.tsx: 설정 페이지
+  - [x] GeneralSettings.tsx: 일반 설정 컴포넌트
+  - [x] SecuritySettings.tsx: 보안 설정 컴포넌트
+  - [x] StakingSettings.tsx: 스테이킹 설정 컴포넌트
+  - [x] CrosschainSettings.tsx: 크로스체인 설정 컴포넌트
+  - [x] DappAndDefiSettings.tsx: DeFi 및 dApp 설정 컴포넌트
+
+### 7단계: 테스트 및 보안 감사 (67% 완료)
+- [x] 단위 테스트 작성
+- [x] 통합 테스트 작성
+- [x] 엔드투엔드 테스트 작성
+- [x] 보안 감사 계획 작성
+- [ ] 보안 감사 실시 (진행중 - 50% 완료)
+  - [x] 내부 보안 감사 1차 진행 (코어 라이브러리)
+  - [x] 내부 보안 감사 2차 진행 (브라우저 확장 프로그램)
+  - [x] 내부 보안 감사 3차 진행 (모바일 앱)
+  - [ ] 내부 보안 감사 4차 진행 (데스크톱 앱 및 텔레그램 미니앱)
+  - [ ] 내부 보안 감사 5차 진행 (크로스체인 기능 및 API)
+  - [ ] 외부 보안 전문 기관에 의한 감사 준비
+- [ ] 취약점 수정 및 개선 (예정)
+
+### 8단계: 문서화 및 배포 (90% 완료)
+- [x] API 문서 작성
+  - [x] core.md: Core 패키지 API 문서 작성 완료
+  - [x] extension.md: 확장 프로그램 API 문서
+  - [x] mobile.md: 모바일 앱 API 문서
+  - [x] desktop.md: 데스크톱 앱 API 문서
+- [x] 사용자 가이드 작성
+  - [x] getting-started.md: 시작하기 가이드
+  - [x] wallet-setup.md: 지갑 설정 가이드
+  - [x] sending-assets.md: 자산 전송 가이드
+  - [x] staking-guide.md: 스테이킹 가이드
+  - [x] nft-guide.md: NFT 관리 가이드
+  - [x] crosschain-guide.md: 크로스체인 기능 가이드
+- [x] 개발자 문서 작성
+  - [x] architecture/overview.md: 아키텍처 개요
+  - [x] architecture/core.md: 코어 아키텍처
+  - [x] architecture/security.md: 보안 아키텍처
+  - [x] architecture/crosschain_part1.md: 크로스체인 아키텍처 (파트 1)
+  - [x] architecture/crosschain_part2.md: 크로스체인 아키텍처 (파트 2)
+  - [x] architecture/crosschain_part3.md: 크로스체인 아키텍처 (파트 3)
+- [x] 스토어 배포 준비
+  - [x] 브라우저 확장 프로그램 스토어 정보 준비
+  - [x] 모바일 앱 스토어 정보 준비
+  - [x] 데스크톱 앱 배포 파일 준비
+  - [x] 텔레그램 미니앱 배포 준비
+- [ ] 최종 배포 (예정)
+  - [ ] 브라우저 확장 프로그램 스토어 업로드
+  - [ ] 모바일 앱 스토어 업로드
+  - [ ] 데스크톱 앱 웹사이트 배포
+  - [ ] 텔레그램 미니앱 배포

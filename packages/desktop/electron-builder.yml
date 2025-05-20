@@ -1,0 +1,70 @@
+appId: "com.creatachain.tori-wallet"
+productName: "TORI Wallet"
+copyright: "Copyright © 2025 TORI Wallet Team"
+
+directories:
+  output: "dist"
+  buildResources: "build"
+
+files:
+  - ".webpack/**/*"
+  - "node_modules/**/*"
+  - "package.json"
+
+extraResources:
+  - from: "assets"
+    to: "assets"
+
+mac:
+  category: "public.app-category.finance"
+  target:
+    - target: "dmg"
+      arch:
+        - "x64"
+        - "arm64"
+  icon: "assets/icon.icns"
+  darkModeSupport: true
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: "entitlements.plist"
+  entitlementsInherit: "entitlements.plist"
+
+dmg:
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: "link"
+      path: "/Applications"
+  window:
+    width: 540
+    height: 380
+
+win:
+  target:
+    - "nsis"
+    - "zip"
+  icon: "assets/icon.ico"
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: "TORI Wallet"
+  uninstallDisplayName: "TORI Wallet"
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+
+linux:
+  target:
+    - "AppImage"
+    - "deb"
+    - "rpm"
+  category: "Finance"
+  icon: "assets/icon.png"
+
+publish:
+  provider: "github"
+  owner: "creatachain"
+  repo: "tori-wallet"
